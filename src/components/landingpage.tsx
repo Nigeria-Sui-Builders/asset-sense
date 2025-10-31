@@ -10,7 +10,7 @@ const LandingPage = () => {
 			{/* Hero Section */}
 			<header className=" px-6 pt-20 md:pt-28 max-w-5xl mx-auto text-center">
 				<div className="space-y-2">
-					<h1 className="text-5xl md:text-8xl font-bold tracking-tight leading-tight text-text    ">
+					<h1 className="text-5xl md:text-8xl font-bold tracking-tight leading-tight text-text">
 						Asset Sense
 					</h1>
 					<p className="text-xl md:text-2xl text-text-muted  max-w-4xl mx-auto leading-relaxed font-light">

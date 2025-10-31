@@ -1,21 +1,17 @@
-import { NavBar } from './components/navbar'
-import { useState } from 'react'
-import WalletManager from './components/walletmanager';
-import LandingPage from './components/landingpage';
+import { NavBar } from './components/navBar'
+import WalletManager from './components/walletManager'
+import LandingPage from './components/landingPage'
+import { useCurrentAccount } from '@mysten/dapp-kit'
 
 const App = () => {
-	const [connected, setConnected] = useState(false);
-	const [wallet, setWallet] = useState(null);
+	const currentAccount = useCurrentAccount()
 	return (
 		<div className="bg-surface min-h-screen transition-colors duration-300">
 			<NavBar />
-      {!connected ? (
+      {!currentAccount ? (
         <LandingPage/>
       ) : (
-        <WalletManager
-          wallet={wallet}
-          onDisconnect={() => setConnected(false)}
-        />
+        <WalletManager />
       )}
 		</div>
 	)

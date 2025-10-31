@@ -5,7 +5,7 @@ import {
 	useCurrentAccount,
 	useDisconnectWallet,
 } from '@mysten/dapp-kit'
-import ThemeToggle from './toggletheme'
+import ThemeToggle from './toggleTheme'
 import { ChevronDown } from 'lucide-react'
 
 export const NavBar = () => {
