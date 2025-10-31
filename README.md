@@ -1,73 +1,136 @@
-# React + TypeScript + Vite
+# Asset Sense
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Your intelligent Sui wallet manager. Detect spam, organize assets, and keep your wallet secure and clutter-free.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🛡️ Security Scan
+- Real-time threat detection for potentially harmful NFTs
+- Smart contract analysis to identify malicious airdrops and phishing attempts
+- Suspicious pattern recognition to protect your assets
 
-## React Compiler
+### 🗂️ Smart Organization
+- AI-powered automatic categorization of assets by type
+- Custom folder creation for better organization
+- Spam filtering and hiding capabilities
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🧹 Easy Cleanup
+- One-click bulk actions to hide, transfer, or remove unwanted items
+- Safe asset burning functionality
+- Quick hide/unhide toggles to reclaim wallet space
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React 19 with TypeScript
+- **Styling**: Tailwind CSS v4
+- **Blockchain**: Sui Network integration via Mysten Dapp Kit
+- **State Management**: TanStack Query for data fetching
+- **Build Tool**: Vite
+- **Icons**: Lucide React
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd assetsense
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   pnpm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   pnpm run build
+   ```
+
+5. **Preview the production build**
+   ```bash
+   pnpm run preview
+   ```
+
+## 🔧 Available Scripts
+
+- `pnpm run dev` - Start the development server
+- `pnpm run build` - Build the project for production
+- `pnpm run lint` - Run ESLint for code quality checks
+- `pnpm run preview` - Preview the production build locally
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/
+│   ├── ui/
+│   │   └── button.tsx          # Reusable button component
+│   ├── landingPage.tsx         # Landing page with features and CTA
+│   ├── navBar.tsx              # Navigation bar component
+│   ├── nftCard.tsx             # NFT/asset card display component
+│   ├── toggleTheme.tsx         # Theme toggle component
+│   └── walletManager.tsx       # Main wallet management interface
+├── hooks/
+│   └── useTheme.tsx            # Custom theme hook
+├── providers/
+│   ├── index.tsx               # Provider composition
+│   ├── query.tsx               # TanStack Query provider
+│   ├── sui.tsx                 # Sui blockchain provider
+│   └── theme.tsx               # Theme context provider
+├── App.tsx                     # Main application component
+├── index.css                   # Global styles and Tailwind imports
+└── main.tsx                    # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔗 Integrations
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Sui Network
+- **Network Support**: Devnet, Testnet, Mainnet
+- **Default Network**: Testnet
+- **Auto-connect**: Wallet auto-connection on page load
+- **Query Capabilities**: Owned objects fetching, object details retrieval
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Wallet Connection
+- Seamless wallet connection via Mysten Dapp Kit
+- Support for popular Sui wallets
+- Non-custodial - private keys never stored
+
+## 🎨 Design System
+
+- **Dark/Light Theme**: Automatic system preference detection with manual toggle
+- **Responsive Design**: Mobile-first approach with responsive grid layouts
+- **Modern UI**: Clean, modern interface with smooth animations and transitions
+- **Accessibility**: Proper contrast ratios and semantic HTML
+
+## 🔒 Security Features
+
+- **Non-custodial**: Never stores private keys or sensitive wallet information
+- **Client-side Processing**: All wallet operations happen locally
+- **Threat Detection**: Built-in spam and malicious NFT detection
+- **Safe Operations**: Secure asset management with user confirmation
+
+## 🚀 Getting Started
+
+1. **Connect Wallet**: Click "Connect Wallet" on the landing page
+2. **Scan Assets**: Asset Sense automatically scans your wallet contents
+3. **Review & Organize**: View categorized assets with spam detection
+4. **Clean Up**: Use bulk actions to organize and clean your wallet
+
+## 🤝Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgments
+
+- Built with [Mysten Dapp Kit](https://github.com/MystenLabs/dapp-kit) for Sui integration
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons from [Lucide React](https://lucide.dev/)
